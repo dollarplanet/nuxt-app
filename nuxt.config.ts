@@ -4,6 +4,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ["@nuxt/content", "@nuxt/eslint", "nuxt-studio"],
   studio: {
+    dev: false,
     repository: {
       provider: "github",
       owner: "dollarplanet",
