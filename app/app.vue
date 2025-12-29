@@ -1,5 +1,14 @@
 <template>
-  <NuxtLayout>
-    <NuxtPage />
-  </NuxtLayout>
+  <UApp>
+    <UHeader />
+
+    <UMain>
+      <NuxtLoadingIndicator />
+      <NuxtLayout>
+        <NuxtPage />
+      </NuxtLayout>
+    </UMain>
+
+    <UFooter />
+  </UApp>
 </template>

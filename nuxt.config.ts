@@ -2,7 +2,8 @@
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
-  modules: ["@nuxt/content", "@nuxt/eslint", "nuxt-studio"],
+  modules: ["@nuxt/ui", "@nuxt/content", "@nuxt/eslint", "nuxt-studio"],
+  css: ["~/assets/css/main.css"],
   studio: {
     repository: {
       provider: "github",
@@ -12,6 +13,9 @@ export default defineNuxtConfig({
     },
     auth: {
       google: {},
+    },
+    i18n: {
+      defaultLocale: "id",
     },
   },
 });
