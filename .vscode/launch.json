@@ -1,0 +1,40 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Nuxt: Backend (Server)",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run",
+        "dev"
+      ],
+      "console": "integratedTerminal",
+      "environment": {
+        "NUXT_PORT": "3000"
+      },
+      "skipFiles": [
+        "<node_internals>/**"
+      ]
+    },
+    {
+      "name": "Nuxt: Frontend (Brave)",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}",
+      "runtimeExecutable": "/snap/bin/brave",
+      "userDataDir": "${workspaceFolder}/.vscode/vscode-brave-profile"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Nuxt: Full Stack Debug",
+      "configurations": [
+        "Nuxt: Backend (Server)",
+        "Nuxt: Frontend (Brave)"
+      ]
+    }
+  ]
+}
